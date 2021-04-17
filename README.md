@@ -11,4 +11,4 @@
 > _En cada carpeta encontraran un documento de como usar el programa 
 > _En cada codigo encontraran letra roja que explica la funcionalidad del codigo
 
-*Cualquier duda en mi perfil esta la forma para contactar conmigo, muchos exitos con esa materia*
+**Cualquier duda en mi perfil esta la forma para contactar conmigo, muchos exitos con esa materia**
