@@ -7,10 +7,11 @@
 
 ---
 > :sparkles: _Hola chicos y chicas que acceden a este contenido gratuito_
+> 
 > _Este repositorio tendra como objetivo agendar ejercicios programados en PYTHON con su respectiva documentacion._
 > 
 > _En cada carpeta encontraran un documento de como usar el programa_ 
 > 
-> _En cada codigo encontraran letra roja que explica la funcionalidad del codigo_
+> _En cada codigo encontraran letra gris clara que explica la funcionalidad del codigo_
 
 **Cualquier duda en mi perfil esta la forma para contactar conmigo, muchos exitos con esa materia**
