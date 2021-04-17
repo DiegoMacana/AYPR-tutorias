@@ -1,3 +1,0 @@
-Es importante que antes de ejecutar el programa
-cree un archivo de texto "Bloc de notas"
-llamado datos y lo deje vacio. Sin ningun espacio
