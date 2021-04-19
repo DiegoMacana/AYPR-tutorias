@@ -2,3 +2,9 @@
 
 # Aprendiendo Python
 _“Eso es el aprendizaje. Entender de repente algo que siempre has entendido, pero de una manera nueva”. —Doris Lessing_
+
+---
+##### Para aprender python es necesario tener 3 cosas:
+- :zap: Ganas de aprender
+- :panda_face: Una computadora o celular
+- :cloud: tener en mente que es posible
