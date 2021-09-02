@@ -1,0 +1,69 @@
+"EPS"
+empiece
+entero salir,edad
+caracter ubicacion
+mq salir<>1 entonces
+	escribir "digite la edad de la persona	"
+	leer edad
+
+	mq (edad<0)entonces
+		digite "dato erroneo. digite de nuevo"
+		escribir "digite la edad de la persona	"
+		leer edad
+	fin_mq
+	escribir "Digite la ubicacion geografica (urbano,rural), (digite todo en minusculas) "	
+	leer ubicacion
+	mq (ubicacion<>"urbano" y ubicacion<>"rural") entonces
+		escribir "opcion incorrecta (digite todo en minusculas) "
+		escribir "Digite la ubicacion geografica (urbano,rural)"	
+		leer ubicacion
+	fin_mq
+	escribir "Digite cuantos salarios minimos gana"
+	lea num_salarios
+	mq (num_salarios<0) entonces
+		escribir "dato erroneo. digite de nuevo"
+		escribir "Digite cuantos salarios minimos gana"
+		lea num_salarios
+	fin_mq
+
+	si ubicacion="urbano" entonces
+		si (edad<=18 entonces)
+			si (num_salarios<=3) entonces
+				escriba "su clasificacion es nivel 1"
+			sino
+				escriba "su clasificacion es nivel 2"
+			fin_si
+		sino
+			si (num_salarios<=3) entonces
+				escriba "su clasificacion es nivel 3"
+			sino
+				escriba "su clasificacion es nivel 4"
+			fin_si
+		fin_si
+	sino 
+		si (edad<=18 entonces)
+			si (num_salarios<=3) entonces
+				escriba "su clasificacion es nivelA"
+			sino
+				escriba "su clasificacion es nivelB"
+			fin_si
+		sino
+			si (num_salarios<=3) entonces
+				escriba "su clasificacion es nivelC"
+			sino
+				escriba "su clasificacion es nivelD"
+			fin_si
+		fin_si
+	fin_si	
+
+
+
+
+	escriba "si desea salir digite 1"
+	lea salir
+fin_mq
+
+pare
+termine
+
+ 

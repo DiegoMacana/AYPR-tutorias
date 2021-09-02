@@ -1,0 +1,62 @@
+empiece
+	entero x,y,z,gx,gy,multiplos(100),xx,yy,contador
+
+	escriba "energia del jugador Muriel "
+	lea x
+	
+	escriba "energia del jugador Cuadrado "
+	lea y
+	
+	escriba "energia del arquero Ospina"
+	lea z
+
+	mq (z != 1) entonces
+		para (m<--1 hasta (z)) haga 
+			multiplos(m)<--m*z
+		fin_para
+
+		xx<--0
+		mq (xx=0) entonces
+			contador<--0
+			para (m<--1 hasta (z)) haga
+				si (multiplos(m)=x) entonces
+					x<--x-1
+					gx<--gx+1
+				fin_si
+				
+				si (multiplos(m)!=x) entonces
+					contador<--contador+1
+				fin_si 
+			fin_para
+			si (contador=z) entonces
+				xx<--1
+			fin_si 
+		fin_mq
+		
+		yy<--0
+		mq (yy=0) entonces
+			contador<--0
+			para (m<--1 hasta (z)) haga
+				si (multiplos(m)=y) entonces
+					y<--y-1
+					gy<--gy+1
+				fin_si
+				
+				si (multiplos(m)!=y) entonces
+					contador<--contador+1
+				fin_si 
+			fin_para
+			si (contador=z) entonces
+				yy<--1
+			fin_si 
+		fin_mq
+		z<--z-1
+	fin_mq
+
+	escriba "goles de muriel "
+	escriba gx
+		
+	escriba "goles de cuadrado"
+	escriba gy
+
+termine

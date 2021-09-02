@@ -1,0 +1,21 @@
+"salarios"
+empiece
+entero salario,n,num,sal
+escribir "digo el promedio de n sueldos que superen los 3 SMMLV"
+escribir "deme n"
+leer n 
+num<-0
+salario<-908523*3
+suma<-0
+mq (num<n) haga
+	escribir "digite un salario"
+	leer sal
+	si (sal>salario) entonces
+		num<-num+1
+		suma<-suma+sal
+	fin_si
+fin_mq
+promedio<-suma/n
+escribir promedio
+pare
+termine

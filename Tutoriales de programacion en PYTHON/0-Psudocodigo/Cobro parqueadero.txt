@@ -1,0 +1,68 @@
+2000 x hora lunes martes, miercoles
+2500 jueves y viernes
+3000 sabado y domingo
+la fraccion empieza desde los 5 min cobra la hora entera (tiempo sin horas >5)
+____________________________________________________
+algoritmo parqueadero
+inicio
+variable tipo entero minutos,horas,pago
+variable tipo caracter dia
+escribir "Digite que dia desea calcular"
+leer dia
+escribir "Digite cuantos minutos demoro"
+leer minutos
+horas=(minutos//60)
+minutos=minutos-(minutos//60)
+si (dia=lunes) haga
+	si (minutos>5) haga
+		pago=horas*2000 +2000
+	sino 
+		pago=horas*2000
+	fin_si
+fin_si
+si (dia=martes) haga
+	si (minutos>5) haga
+		pago=horas*2000 +2000
+	sino 
+		pago=horas*2000
+	fin_si
+fin_si
+si (dia=miercoles) haga
+	si (minutos>5) haga
+		pago=horas*2000 +2000
+	sino 
+		pago=horas*2000
+	fin_si
+fin_si
+si (dia=jueves) haga
+	si (minutos>5) haga
+		pago=horas*2500 +2500
+	sino 
+		pago=horas*2500
+	fin_si
+fin_si
+si (dia=viernes) haga
+	si (minutos>5) haga
+		pago=horas*2500 +2500
+	sino 
+		pago=horas*2500
+	fin_si
+fin_si
+si (dia=sabado) haga
+	si (minutos>5) haga
+		pago=horas*3000 +3000
+	sino 
+		pago=horas*3000
+	fin_si
+fin_si
+si (dia=domingo) haga
+	si (minutos>5) haga
+		pago=horas*3000 +3000
+	sino 
+		pago=horas*3000
+	fin_si
+fin_si
+escribir "el total a pagar es"
+escribir (pago)
+fin_algoritmo
+	

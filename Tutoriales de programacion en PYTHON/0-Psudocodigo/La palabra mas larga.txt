@@ -1,0 +1,45 @@
+empiece
+entero tam,cant,tamaños(200),cont,max,empiezaEN(200)
+caracter vec(200),palabras(200)
+escriba "ingrese el tamaño del vector"
+lea tam
+para (x<--0 hasta (tam)) haga
+	lea vec(x)
+fin_para
+
+cant<--0
+cont<--0
+pal<--""
+para (x<--0 hasta (tam)) haga
+	si (vec(x)="*") entonces 
+		cant<--cant+1
+		palabras(cant-1)<--pal
+		tamaños(cant-1)<--cont
+		cont<--0
+		pal<--""
+	fin_si
+
+	si (vec(x)!="*") entonces
+		si (pal="") entonces
+			empiezaEN(cant)<--x
+		fin_si
+		cont<-cont+1
+		pal<-pal+vec(x)
+	fin_si
+		
+fin_para
+max<--0
+para (x<--0 hasta (cant)) haga
+	si (max<tamaños(x)) entonces
+		max<--tamaños(x)
+		pal<--palabras(x)
+		inicia<--empiezaEN(x)
+		finaliza<--inicia+max-1
+	fin_si
+fin_para
+
+escriba " En el vector inicial hay", cant,"palabras, la mas larga es",pal,
+	  "que tiene",max,caracteres y se encuentra entre las posiciones",inicia,"y",finaliza
+
+
+termine

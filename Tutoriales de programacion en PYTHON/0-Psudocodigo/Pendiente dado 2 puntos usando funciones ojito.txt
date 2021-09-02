@@ -1,0 +1,68 @@
+explicacion punto 1
+
+** Definición.
+"calculo_pendiente(x1, y1,x2, y2,ref pendiente )"
+
+##EXPLICACION: un punto es dado por un numero en X y uno en Y
+## para sacar una pendiente se necesitan dos puntos por eso se
+## declaran punto1(x1,y1) , punto2(x2,y2) como parametros por valor
+## se declara pendiente como variable de referencia 
+## porque al terminar la rutina el valor de pendiente se guardara 
+
+entero x1,y1,x2,y2
+real pendiente
+
+
+
+** Parámetros por valor: x1,y1,x2,y2
+** Parámetros por referencia: pendiente
+empiece
+** Variables locales: no hay
+##como es de notar no hay variables locales, debido a que la solucion
+## estara en la variable pendiente
+pendiente<--(y2-y1)/(x2-x1)
+retorne
+termine
+
+** Ejemplo de invocación.
+llame_a (calculo_pendiente(x1, y1 x2,y2, ref pendiente ))
+** Argumentos por valor: x1,y1,x2,y2
+** Argumentos por referencia: pendiente
+
+
+
+Explicacion punto 2
+** Definición.
+"suma_vector (n,vector(n), ref suma1,ref suma2,pos)"
+entero n,vector(n),suma1,suma2,pos
+
+##EXPLICACION: se tienen 3 parametros de valor: n,vector(n),pos
+## n es el tamaño del vector y pos la posicion para hacer la operacion
+
+** Parámetros por valor: n,vector(n),pos
+** Parámetros por referencia: suma1,suma2
+empiece
+** Variables locales: no hay
+suma1<-0
+suma2<-0
+##EXPLICACION como siempre los contadores o acomuladores se inician en ## 0
+
+
+para (num<-0 hasta n) haga
+      si (num<pos)  entonces
+              suma1<-suma1+vector(num)
+      sino
+              si (num ≥pos ) entonces 
+                   suma2<-suma2+vector(num)
+               fin_si
+      fin_si
+fin_para
+##Ejecuta el para donde num es la posicion del para y pos la posicion ##del vector.
+
+retorne
+termine
+
+** Ejemplo de invocación.
+llame_a (suma_vector(n,vector(n),ref suma1,ref suma2, pos))
+** Argumentos por valor: n,vector(n),pos
+** Argumentos por referencia: suma1,suma2

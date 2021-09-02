@@ -1,0 +1,36 @@
+"segundo_punto"
+inicio
+entero vector1(100),vector2(100),tam1,tam2,producto,n,vector3(100)
+escriba "digite el tamaño del vector 1"
+lea tam1
+mq (tam1<=0 o tam1>99) entonces
+	escriba "digite el tamaño del vector 1"
+	lea tam1
+fin_mq
+escriba "digite el tamaño del vector 2"
+lea tam2
+mq (tam2<=0 o tam2>99) entonces
+	escriba "digite el tamaño del vector 2"
+	lea tam2
+fin_mq
+producto<--1
+escriba "coloque los datos del vector 1"
+para (i<--0 hasta (tam1-1)) haga
+	escribir "digite el dato para la posicion: ",i 
+	lea vector1(i)
+	producto<--producto*vector1(i)
+
+fin_para
+escriba "coloque los datos del vector 2"
+posicion<--0
+para (i<--0 hasta (tam2-1)) haga
+	escribir "digite el dato para la posicion: ",i 
+	lea vector2(i)
+	si (vector(i)>producto) entonces
+		vector3(posicion)<--vector2(i)
+		posicion<--posicion+1
+	fin_si	
+fin_para
+escriba "la cantidad de numeros que cumplen la condicion es: ",posicion+1,"y son: "vector3
+pare
+termine

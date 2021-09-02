@@ -1,0 +1,27 @@
+"multiplosDePDeUnIntervalo"
+empiece
+entero p,a,b,multi
+
+escribir "escribo los multiplos de p que pertenencen al intervalo [a,b]"
+
+escribir "porfavor digite p"
+leer p 
+escribir "porfavor digite a"
+leer a
+escribir "porfavor digite b"
+leer b
+
+escribir "los numeros que petenecen al intervalo son: "
+multi<-1
+p1<-p
+mq (p<b) haga
+	si p>=a y p<=b entonces:
+		escribir n
+	fin_si
+	multi<-multi+1
+	p<-p1*multi
+fin_mq
+pare
+termine
+
+

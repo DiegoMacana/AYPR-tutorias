@@ -1,0 +1,20 @@
+"edad de personas"
+empiece 
+escribir "encuentro y escribo la edad promedio de N personas"
+entero n,suma,num,x,rta
+escribir "digite la cantidad N de personas "
+leer n
+num<-0
+suma<-0
+x<-0
+rta<-0
+mq (num<n) haga:
+	escribir "deme un numero"
+	leer x
+	suma<- suma+x
+	num<-num+1
+fin_mq
+rta<- suma/num
+escribir rta
+pare 
+fin

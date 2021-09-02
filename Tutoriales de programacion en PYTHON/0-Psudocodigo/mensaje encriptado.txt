@@ -1,0 +1,21 @@
+"encriptar"
+inicio 
+caracter palabra(200),abc(26)
+abc<- ("a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z")
+escribir "digite cuantos caracteres va a almacenar"
+lea n
+para i<-0 hasta n haga
+	lea palabra(i)
+fin_para
+para i<-0 hasta n haga 
+	letra=palabra(i)
+	para j<-0 hasta 26 haga 	
+		si (letra=abc(j)) entonces
+			palabra(i)=abc(j+4)
+		fin_si
+	fin_para
+fin_para
+escribir "Mensaje encriptado: "		
+escribir palabra
+pare
+termine 

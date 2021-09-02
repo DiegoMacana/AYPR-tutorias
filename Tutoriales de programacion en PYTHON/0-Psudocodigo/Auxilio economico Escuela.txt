@@ -1,0 +1,31 @@
+"ValorPromedioMatriculaYTotalAuxilios"
+empiece
+entero n, matricula, semestre, auxilio, prom_matricula, total_auxilio
+flotante porcentaje
+prom_matricula<-0
+total_auxilio<-0
+escribir "Ingrese el numero de estudiantes"
+leer n
+mp n>0 haga
+	escribir "Ingrese el valor de la matricula"
+	leer matricula
+	prom_matricula = prom_matricula + matricula
+	escribir "Ingrese el semestre"
+	leer semestre
+	si semestre<=5 entonces
+		porcentaje = semestre * 4
+		porcentaje = porcentaje / 100
+		auxilio = matricula * porcentaje
+	fin_si
+	sino
+	si semestre>5 entonces
+		auxilio = matricula * 0.3
+	fin_si
+	total_auxilio = total_auxilio + auxilio
+	n = n - 1
+fin mp
+pare
+prom_matricula = prom_matricula / n
+escribir prom_matricula
+escribir total_auxilio
+termine

@@ -1,0 +1,30 @@
+"algoritmo_carros"
+inicio
+entero autos(24),tamaño,total,contador0,horas
+tamaño<-23
+para (i<-0 hasta tamaño) haga
+	escribir "cuantos autos pasaron en la hora: ",(i+1)
+	leer autos(i)
+fin_para
+total<-0
+contador0<-0
+mayor<-autos(0)
+posicion<-1
+para (i<-0 hasta tamaño) haga
+	total<-total+autos(i)
+	si (autos(i)=0) entonces
+		horas(contador)<-i+1
+		contador0=contador0+1
+	fin_si
+	si (autos(i)>mayor) entonces
+		mayor<-autos(i)
+		posicion<-(i+1)
+	fin_si
+fin_para
+escribir "cantidad de autos que pasaron en el dia: ",total
+escribir "en estas horas no paso ningun carro",horas
+escribir "la cantidad de horas que no paso un carro fue: ",contador0
+escribir "la hora que paso la mayor cantidad de carros fue: ",posicion
+escribir "la cantidad de carros que pasaron a la hora anterior fue de ", mayor
+pare
+termine

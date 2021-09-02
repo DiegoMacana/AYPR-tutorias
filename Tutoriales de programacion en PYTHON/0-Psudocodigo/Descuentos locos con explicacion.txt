@@ -1,0 +1,66 @@
+
+“Al_Detal”
+empiece
+
+##EXPLICACION: se inicializan dos clases de variables (enteros y reales)
+## Los reales fueron declarados porque hacen operaciones de division.
+
+
+entero cantidad,num,precio,descuento, conta_descuento, conta_precio
+real precio_descuento, conta_pmd, porcentale_final
+
+escriba “En la tienda Al Detal, si un cliente compra todos los productos que hay en promoción”
+
+
+##EXPLICACION solicito la cantidad de productos de la tienda 
+## y solicito por medio de un si que sea mayor que 0 y menor igual a 20
+
+escriba “escriba la cantidad de productos que tiene Al Detal”
+lea cantidad
+si (cantidad>0 y cantidad<=20) entonces
+
+		##EXPLICACION aca inicializamos las variables en 0
+		##esto se hace cuando mas adelante se hacen operaciones
+		## del estilo x<- x + 1
+		num<-0
+		conta_precio<-0
+		conta_descuento<-0
+                conta_pmd<-0
+		
+		##EXPLICACION: inicio el mq usando a num como iterador
+		mq (num < cantidad) haga
+			##EXPLICACION : leo dos datos, precio y descuento
+			escriba “deme el precio del producto ”
+			lea precio
+			escriba “deme el descuento”
+			lea descuento
+
+			##EXPLICACION uso las variables que se declararon arriba para 
+			## acomular los resultados, usando formulas para sacar porcentajes
+
+			precio_descuento <- precio - ((precio*descuento)/100)
+			
+			##EXPLICACION: aca cuento cuantos productos tienen porcentaje>50
+			si (descuento>50) entonces
+				conta_descuento<- conta_descuento+1
+			sino
+				conta_descuento<-precio
+			fin_si
+
+
+			conta_pmd<- conta_pmd + conta_descuento
+			conta_precio <- conta_precio+precio
+
+			num<-num+1
+		fin_mq
+		## EXPLICACION escribo los resultados segun dice el enunciado y porcentaje_final obtiene esa formula para saber que porcentaje se ahorro de la compra
+	|	porcentaje_final <- ((conta_precio – conta_pmd)/conta_precio)*100
+		escriba “Estimado cliente, hay”,conta_descuento,” producto(s) que tienen descuento    mayor o igual a 50 %. Si comprara los”,cantidad,” productos al precio común y corriente, pagaría”, conta_precio , “Si aprovecha la promoción, pagará sólo”, conta_pmd, “. Es decir, un descuento total del ” porcentaje_final
+
+
+si_no
+	escriba “la cantidad debe ser entre el rango (0,20]”
+fin_si
+escriba “fin AL_detal”
+pare 
+termine

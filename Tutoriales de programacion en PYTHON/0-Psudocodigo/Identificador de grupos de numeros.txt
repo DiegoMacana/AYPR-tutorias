@@ -1,0 +1,31 @@
+"NumerosEnteros"
+entero cant_numeros, numero, sum_negativos, cant_ceros, cant_positivos, produc_positivos, i
+sum_negativos<-0
+cant_ceros<-0
+cant_positivos<-0
+produc_positivos<-1
+empiece
+escribir "Ingrese la cantidad de numeros"
+leer cant_numeros
+para i<-1 hasta cant_numeros haga
+	escribir "Digite el numero"
+	leer numero
+	si numero < 0 haga
+		sum_negativos<-sum_negativos+numero
+	fin_si
+	sino
+	si numero = 0 haga
+		cant_ceros<-cant_ceros+1
+	fin_si
+	sino
+	si numero>0 haga
+		si (numero%2) = 0 haga
+			cant_positivos<-cant_positivos+1
+			produc_positivos<- produc_positivos*numero
+		fin_si
+	fin_si
+fin_para
+escribir sum_negativos
+escribir cant_ceros
+escribir cant_positivos, produc_positivos
+termine

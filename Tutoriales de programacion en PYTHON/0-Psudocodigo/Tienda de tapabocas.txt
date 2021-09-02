@@ -1,0 +1,37 @@
+"tapabocas"
+real precio1,precio2,precio3,descuento,totalp,cantidad,tapabocasv,descuentov,c,num,n
+escriba "digite cuantos clientes desea atender"
+leer c
+num<-0
+tapabocasv<-0
+descuentov<-0
+mq (num<c) haga
+	escribir "cuantos tapabocas desea comprar"
+	leer n
+	si (n<12) entonces
+		precio<-2000
+	fin_si
+	sino
+	si (n>=12 y n<36) entonces
+		precio<-1800
+	fin_si
+	sino
+	si (n>=36) entonces
+		precio<-1500
+	fin_si
+	totalp<-n*2000
+	descuento<-precio*n
+	escribir "cantidad de compra ",n	
+	escribir "precio",totalp
+	escribir "por descuendo cada tapabocas vale,"precio
+	escribir "total a pagar",descuento
+	tapabocasv<-tapabocasv+n
+	descuendov<-descuendov+descuento
+	num<-num+1
+fin_mq
+escribir "se vendieron ",tapabocasv
+escribir "precio sin descuento",tapabocasv*2000
+escribir "total con descuento ",descuentov
+pare 
+termine
+	

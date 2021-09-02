@@ -1,0 +1,71 @@
+Explicacion codigo: 
+
+“enteraydecimal”
+empiece
+
+##EXPLICACION: se crea dos vectores diferentes decimales y enteros con
+## capacidad de 50, se declara los decimales en real y los enteros en enteros,
+## esto debido a que si declaro ambos reales en enteros se podria guardar numeros como:
+## 50.0, 12.0, n.0... 
+## tambien declaro una variable llamada "otro" para realizar la conversion a entero
+real num_r (50), decimales(50)
+entero n, pv ,otro, enteros(50)
+
+
+escriba “Ingrese números reales, máximo 50, y yo le digo cuál es la parte entera y la parte decimal de cada uno.”
+escriba “¿Cuántos números me dará (máximo 50)?”
+lea n
+si (n  0 o n > 50) entonces
+escriba “Imposible trabajar”, n, “números.”
+escriba “Fin.”
+si_no
+
+
+** Entrada de los números.
+para pv <- 0 hasta n - 1 haga
+escriba “Ingrese número real”
+lea num_r (pv)
+fin_para
+** Guarda en un vector la parte entera de cada número real.
+
+
+##EXPLICACION al hacer otro= num_r(pv) lo que hace es convertir el decimal al entero mas cercano
+Para pv<-0 hasta n-1 haga
+         otro<- (num_r(pv))
+         enteros(pv) <- otro
+** Guarda en un vector la parte decimal de cada número real.
+
+	 decimales(pv) <- (num_r(pv)) - otro  ## y aca lo que hace para gaurdar la parte decimal es hacer la resta de 
+					      ## la parte entera por el numero con la parte decimal es decir 
+					      ## si num=1.2 y el entero es 1 entonces la parte decimal sera 1.2-1 ) 0.2
+fin_para
+
+
+
+##EXPLICACION: aca escribo los resultados escribiendo cada vector
+
+
+** Escribe los resultados.
+escriba “Dados los números:”
+para pv <- 0 hasta n - 1 haga
+escriba num_r (pv) 
+fin_para
+
+escriba “Las partes enteras son:”
+Para pv<-0 hasta n-1 haga
+	        escriba enteros(pv)
+fin_para
+
+##
+
+
+escriba “y las partes decimales son:”
+Para pv<-0 hasta n-1 haga
+	        escriba decimales(pv)
+fin_para
+
+
+escriba “Tarea terminada.”
+fin_si
+pare
+termine

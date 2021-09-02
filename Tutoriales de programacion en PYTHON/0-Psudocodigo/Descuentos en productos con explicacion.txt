@@ -1,0 +1,48 @@
+“descuentos”
+empiece
+
+##EXPLICACION: dos clases de variables, enteras y reales
+## las reales se usan cuando hacen operaciones con division
+
+entero precios(20),descuentos(20), cant, total_pago
+real total_pago_descuento,final
+
+##leo la cantidad de productos  
+escriba “cuantos productos tiene la tienda (tiene que ser de 1 hasta máximo 20 productos)”
+lea cant
+
+##Creo un para para llenar el vector con dos datos, precios y descuentos
+para valor <- 0 hasta cant haga
+	escriba “deme el precio de un producto”
+	lea precios(valor)
+	escriba “deme el descuento del producto”
+	lea descuentos(valor)
+fin_para
+
+## inicializo variables en 0 cuando van a realizar operaciones del estilo x<-+1
+
+mayor_50<-0
+total_pago<-0
+total_pago_descuento<-0
+
+#este para me  ayuda a recorrer los vectores ya creados para sacar las ecuaciones de los porcentajes
+
+para valor<-0 hasta cant haga
+	si  descuentos(valor)>50 entonces
+		mayor_50<- mayor_50+1
+	fin_si
+	total_pago<-total_pago+precios(valor)
+	total_pago_descuento<total_pago_descuento+(precios(valor)-  (precios(valor)*descuentos(valor)/100	) 
+fin_para
+
+##declaro la variable final que es la que me da el porcentaje que se gana el cliente al comprar todo
+
+final<- ((total_pago – total_pago_descuento)/total_pago)*100
+
+## escribo el mensaje resultante informando lo que dice el enunciado
+
+escriba “estimado cliente hay ”,mayor_50,”productos que tienen descuento >= 50%, si compra los ”,cant,”productos su precio es de ”,total_pago,”si aprovecha la promoción solo pagara ”, total_pago_descuentos,”es decir un descuento total del ”, final
+
+escriba “fin”
+pare 
+termine

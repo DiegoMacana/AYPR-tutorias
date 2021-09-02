@@ -1,0 +1,37 @@
+"carnets"
+inicio
+entero salon1(100),salon2(100),id,n,repetidos(100),posicion
+escribir "cuantos estudiantes tiene un salon? "
+leer n
+para i<-0 hasta n haga
+	escribir "digite el carnet para el estudiante "+1+" del curso 1"
+	leer salon1(i)	
+fin_para	
+para i<-0 hasta n haga
+	escribir "digite el carnet para el estudiante "+1+" del curso 2"
+	leer salon2(i)	
+fin_para
+posicion<-0
+para i<-0 hasta n haga
+	id=salon1(i)
+	para j<-0 hasta n haga
+		si (id=salon2(j)) entonces
+			repetidos(posicion)=id
+		fin_si
+	fin_para
+fin_para
+escribir "los carnets que se repiten en ambos salones son: ",repetidos
+escribir "los cantidad de carnets que se repiten son: ", posicion+1
+escribir "digite un carnet para averiguar en que salon esta: "
+leer id
+para i<-0 hasta n haga
+	si (id=salon1(i)) entonces
+		escribir "el carnet esta en el salon 1"
+fin_para
+para i<-0 hasta n haga
+	si (id=salon2(i)) entonces
+		escribir "el carnet esta en el salon 2"
+	fin_si
+fin_para
+pare
+termine

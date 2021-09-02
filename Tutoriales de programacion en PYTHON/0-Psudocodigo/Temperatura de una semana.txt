@@ -1,0 +1,70 @@
+"matrices"
+inicio
+entero calendario(5)(7),conta(7),mayor,menor,posicion1,posicion2,promedio(5),mayordia
+caracter dias(7)
+dias(0)<-"lunes"
+dias(1)<-"martes"
+dias(2)<-"miercoles"
+dias(3)<-"jueves"
+dias(4)<-"viernes"
+dias(5)<-"sabado"
+dias(6)<-"domingo"
+para i<-0 hasta 5 haga
+	para j<- hasta 7 haga
+		si i=5 y j>2 entonces
+			calendario(i)(j)<-0
+		fin_si	
+		escribir "digite la temperatura del dia ",dia (j)
+		leer calendario(i)(j)
+	fin_para
+fin__para
+conta(0)<-0
+conta(1)<-0
+conta(2)<-0
+conta(3)<-0
+conta(4)<-0
+conta(5)<-0
+conta(6)<-0
+para i<-0 hasta 5 haga
+	para j<- hasta 7 haga
+		conta(j)<-conta(j)+calendario(i)(j)
+	fin_para
+fin__para
+mayor<-conta(0)
+menor<-conta(0)
+posicion<-0
+para i<-0 hasta 7 haga
+	si conta(i)>mayor entonces
+		mayor<-conta(i)
+		posicion1<-i
+	fin_si
+	si conta(i)<menor entonces
+		menor<- conta(i)
+		posicion2<-i
+	fin_si
+	
+fin_para
+escribir "la temperatura mas alta fue",mayor," en el dia: ",dias(posicion1)
+escribir "la temperatura mas baja fue",menor," en el dia: ",dias(posicion2)
+promedio(0)<-0
+promedio(1)<-0
+promedio(2)<-0
+promedio(3)<-0
+promedio(4)<-0
+para i<-0 hasta 5 haga
+	para j<- hasta 7 haga
+		promedio(i)<-promedio(i)+calendario(i)(j)
+	fin_para
+	escribir "promedio temperatura de la semana",i+1,"es :",promedio(i)/7
+fin__para
+mayordia<-calendario(0)(0)
+para i<-0 hasta 5 haga
+	para j<- hasta 7 haga
+		si (calendario(i)(j)>mayordia) entonces
+			mayordia<-calendario(i)(j)
+		fin_si
+	fin_para
+fin__para
+escribir "el dia que mas hubo temperatura fue: ",mayordia
+pare 
+termine

@@ -1,0 +1,17 @@
+"divisores"
+entero num
+escribir "averiguo cuantos divisores tiene un numero exeptuando de si mismo y del 1"
+escribir "deme un numero"
+leer num
+n<-2
+sum=0
+mq(n<=num-1) haga
+	si (num%n==0) entonces
+		sum<-sum+1
+	fin_si
+	n<-n+1
+fin_mq
+pare 
+termine
+
+	
